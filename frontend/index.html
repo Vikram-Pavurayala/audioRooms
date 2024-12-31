@@ -1,0 +1,53 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Chat Rooms</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Join/Create Room Section -->
+        <div id="room-selection" class="section">
+            <h1>Audio Chat Rooms</h1>
+            <div class="room-controls">
+                <div class="join-room">
+                    <h2>Join a Room</h2>
+                    <input type="text" id="room-id" placeholder="Enter Room ID">
+                    <input type="text" id="username" placeholder="Your Name">
+                    <button id="join-btn">Join Room</button>
+                </div>
+                <div class="create-room">
+                    <h2>Create a Room</h2>
+                    <button id="create-btn">Create New Room</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Active Room Section -->
+        <div id="active-room" class="section hidden">
+            <div class="room-header">
+                <h2>Room: <span id="current-room"></span></h2>
+                <button id="leave-btn">Leave Room</button>
+            </div>
+            <div class="room-content">
+                <div class="participants">
+                    <h3>Participants</h3>
+                    <ul id="participants-list"></ul>
+                </div>
+                <div class="controls">
+                    <button id="mute-btn">Mute</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js"></script>
+    <script src="js/webrtc.js"></script>
+    <script src="js/room.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
