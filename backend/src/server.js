@@ -7,7 +7,7 @@ const cors = require('cors');
 const { RoomManager } = require('./utils/roomManager');
 
 const app = express();
-app.use(express.static(frontend + '/index.html'));
+app.use(express.static(__frontend + 'index.html'));
 const server = http.createServer(app);
 const roomManager = new RoomManager();
 
