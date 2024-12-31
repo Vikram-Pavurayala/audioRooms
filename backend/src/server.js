@@ -11,7 +11,7 @@ const roomManager = new RoomManager();
 
 const io = socketIO(server, {
     cors: {
-        origin: ['http://localhost:5500', 'https://vikram-pavurayala.github.io/audioRooms/frontend/index.html'],
+        origin: ['http://localhost:10000', 'https://vikram-pavurayala.github.io/audioRooms/frontend/index.html'],
         methods: ["GET", "POST"]
     }
 });
